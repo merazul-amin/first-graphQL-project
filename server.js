@@ -27,6 +27,9 @@ const resolvers = {
         users: () => users,
         quotes: () => quotes,
 
+    },
+    User: {
+        quotes: (ur) => quotes.filter(quote => quote.by === ur.id)
     }
 };
 
